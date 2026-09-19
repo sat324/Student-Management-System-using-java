@@ -38,89 +38,89 @@ public class Student {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    // public void setId(int id) {
+    //     this.id = id;
+    // }
 
     public String getRollNo() {
         return rollNo;
     }
 
-    public void setRollNo(String rollNo) {
-        this.rollNo = rollNo;
-    }
+    // public void setRollNo(String rollNo) {
+    //     this.rollNo = rollNo;
+    // }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    // public void setName(String name) {
+    //     this.name = name;
+    // }
 
     public String getDepartment() {
         return department;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
-    }
+    // public void setDepartment(String department) {
+    //     this.department = department;
+    // }
 
     public int getSemester() {
         return semester;
     }
 
-    public void setSemester(int semester) {
-        this.semester = semester;
-    }
+    // public void setSemester(int semester) {
+    //     this.semester = semester;
+    // }
 
     public double getMark1() {
         return mark1;
     }
 
-    public void setMark1(double mark1) {
-        this.mark1 = mark1;
-    }
+    // public void setMark1(double mark1) {
+    //     this.mark1 = mark1;
+    // }
 
     public double getMark2() {
         return mark2;
     }
 
-    public void setMark2(double mark2) {
-        this.mark2 = mark2;
-    }
+    // public void setMark2(double mark2) {
+    //     this.mark2 = mark2;
+    // }
 
     public double getMark3() {
         return mark3;
     }
 
-    public void setMark3(double mark3) {
-        this.mark3 = mark3;
-    }
+    // public void setMark3(double mark3) {
+    //     this.mark3 = mark3;
+    // }
 
     public double getMark4() {
         return mark4;
     }
 
-    public void setMark4(double mark4) {
-        this.mark4 = mark4;
-    }
+    // public void setMark4(double mark4) {
+    //     this.mark4 = mark4;
+    // }
 
     public double getMark5() {
         return mark5;
     }
 
-    public void setMark5(double mark5) {
-        this.mark5 = mark5;
-    }
+    // public void setMark5(double mark5) {
+    //     this.mark5 = mark5;
+    // }
 
     public double getAttendance() {
         return attendance;
     }
 
-    public void setAttendance(double attendance) {
-        this.attendance = attendance;
-    }
+    // public void setAttendance(double attendance) {
+    //     this.attendance = attendance;
+    // }
 
     // Calculate total marks
     public double getTotal() {

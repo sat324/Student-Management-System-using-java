@@ -131,7 +131,7 @@ public class StudentDAO {
     }
 
 
-    // UPDATE STUDENT
+    //UPDATE STUDENT
     public void updateStudent(Student student) {
 
         String sql = "UPDATE students SET " +
@@ -344,4 +344,128 @@ public class StudentDAO {
         else
             return "F";
     }
+
+    // UPDATE NAME
+public void updateName(String rollNo, String name) {
+
+    String sql = "UPDATE students SET name = ? WHERE roll_no = ?";
+
+    try (Connection con = DBConnection.getConnection();
+         PreparedStatement ps = con.prepareStatement(sql)) {
+
+        ps.setString(1, name);
+        ps.setString(2, rollNo);
+
+        int rows = ps.executeUpdate();
+
+        if (rows > 0)
+            System.out.println("Name updated successfully!");
+        else
+            System.out.println("Student not found.");
+
+    } catch (Exception e) {
+        System.out.println("Error updating name!");
+        System.out.println(e.getMessage());
+    }
+}
+
+
+// UPDATE DEPARTMENT
+public void updateDepartment(String rollNo, String department) {
+
+    String sql = "UPDATE students SET department = ? WHERE roll_no = ?";
+
+    try (Connection con = DBConnection.getConnection();
+         PreparedStatement ps = con.prepareStatement(sql)) {
+
+        ps.setString(1, department);
+        ps.setString(2, rollNo);
+
+        int rows = ps.executeUpdate();
+
+        if (rows > 0)
+            System.out.println("Department updated successfully!");
+        else
+            System.out.println("Student not found.");
+
+    } catch (Exception e) {
+        System.out.println("Error updating department!");
+        System.out.println(e.getMessage());
+    }
+}
+
+
+// UPDATE SEMESTER
+public void updateSemester(String rollNo, int semester) {
+
+    String sql = "UPDATE students SET semester = ? WHERE roll_no = ?";
+
+    try (Connection con = DBConnection.getConnection();
+         PreparedStatement ps = con.prepareStatement(sql)) {
+
+        ps.setInt(1, semester);
+        ps.setString(2, rollNo);
+
+        int rows = ps.executeUpdate();
+
+        if (rows > 0)
+            System.out.println("Semester updated successfully!");
+        else
+            System.out.println("Student not found.");
+
+    } catch (Exception e) {
+        System.out.println("Error updating semester!");
+        System.out.println(e.getMessage());
+    }
+}
+
+
+// UPDATE MARK
+public void updateMark(String rollNo, String markColumn, double mark) {
+
+    String sql = "UPDATE students SET " + markColumn + " = ? WHERE roll_no = ?";
+
+    try (Connection con = DBConnection.getConnection();
+         PreparedStatement ps = con.prepareStatement(sql)) {
+
+        ps.setDouble(1, mark);
+        ps.setString(2, rollNo);
+
+        int rows = ps.executeUpdate();
+
+        if (rows > 0)
+            System.out.println("Mark updated successfully!");
+        else
+            System.out.println("Student not found.");
+
+    } catch (Exception e) {
+        System.out.println("Error updating mark!");
+        System.out.println(e.getMessage());
+    }
+}
+
+
+// UPDATE ATTENDANCE
+public void updateAttendance(String rollNo, double attendance) {
+
+    String sql = "UPDATE students SET attendance = ? WHERE roll_no = ?";
+
+    try (Connection con = DBConnection.getConnection();
+         PreparedStatement ps = con.prepareStatement(sql)) {
+
+        ps.setDouble(1, attendance);
+        ps.setString(2, rollNo);
+
+        int rows = ps.executeUpdate();
+
+        if (rows > 0)
+            System.out.println("Attendance updated successfully!");
+        else
+            System.out.println("Student not found.");
+
+    } catch (Exception e) {
+        System.out.println("Error updating attendance!");
+        System.out.println(e.getMessage());
+    }
+}
 }
